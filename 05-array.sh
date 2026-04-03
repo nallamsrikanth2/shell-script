@@ -7,5 +7,5 @@ echo "second movie is ${MOVIES[1]}"
 echo "third movie is ${MOVIES[2]}"
 
 
-echo "first movie is : ${MOVIES[3]}
+echo "first movie is : ${MOVIES[3]}"
 
