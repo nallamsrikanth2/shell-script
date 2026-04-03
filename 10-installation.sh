@@ -24,10 +24,11 @@ dnf install git -y
 
 if [ $? -ne 0 ]
 then 
-    echo "git is failur"
+    echo "git is failure"
     exit 1
 else
     echo "git is success"
+fi
 
 echo "my this basic shell script"
 
