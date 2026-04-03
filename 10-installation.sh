@@ -11,7 +11,10 @@ else
 fi
 
 
-dnf install mysql -y
+dnf install mysqll -y
+
+
+echo "my this basic shell script"
 
 
 
