@@ -1,6 +1,6 @@
 #!/bin/bash
 
-MOVIES="$@"
+MOVIES=(("$@"))
 
 echo "first movie ${MOVIES[0]}"
 echo "Second movie ${MOVIES[1]}"
