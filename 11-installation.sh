@@ -1,6 +1,6 @@
 #!/bin/bash
 
-NAME=jagadeesh
+NAME=$1
 
 echo "my name $NAME"
 
