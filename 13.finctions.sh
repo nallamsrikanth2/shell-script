@@ -12,6 +12,7 @@ then
     echo "$1 is failure"
 else 
     echo "$2 is success"
+fi
 }
 
 if [$USERID -ne 0]
