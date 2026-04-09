@@ -20,7 +20,6 @@ do
     if [ $? -eq 0 ]
     then
         echo "alreay installed ....SKIPING"
-        exit
     else
         echo "need to install"
     fi
