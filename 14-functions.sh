@@ -23,8 +23,8 @@ else
     echo "you are root user"
 fi
 
-dnf install mysql -y   &>> $LOF_FILES
+dnf install mysql -y   &>> $LOF_FILE
 VALIDATE $? "installing mysql"
 
-dnf install git -y  &>> $LOF_FILES
+dnf install git -y  &>> $LOF_FILE
 VALIDATE $? "installing git"
