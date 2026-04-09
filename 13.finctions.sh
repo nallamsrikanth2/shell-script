@@ -4,7 +4,7 @@ TIMESTAMP=$(date +%F-%H-%M)
 SCRIPT_NAME=$(echo $0 | cut -d "." -f1)
 LOF_FILES=/tmp/$SCRIPT_NAME-$TIMESTAMP.log
 
-echo "script staeted excuting at $TIMESTAMP"
+echo "script started excuting at $TIMESTAMP"
 
 VALIDATE() {
 if [$? -ne 0]
