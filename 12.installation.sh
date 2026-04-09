@@ -38,7 +38,7 @@ else
     echo "nginx is sucuess"
 fi
 
-dnf install nodejs:24 -y
+dnf install nodejs -y
 
 if [ $? -ne 0 ]
 then 
