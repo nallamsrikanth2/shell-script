@@ -8,6 +8,7 @@ LOF_FILE=/tmp/$SCRIPT_NAME-$TIMESTAMP.log
 R="\e[31m"
 G="\e[32m"
 N="\e[0m"
+Y="\e[33m"
 
 VALIDATE (){
     if [ $? -ne 0 ]
@@ -33,7 +34,7 @@ do
     dnf list installed $i  &>>$LOF_FILE
     if [ $? -eq 0 ]
     then
-        echo "alreay installed ....SKIPING"
+        echo -e "alreay installed .... $Y SKIPING $N"
     else
         dnf install $i -y &>>$LOF_FILE
         VALIDATE $? "installing $i"
