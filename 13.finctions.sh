@@ -7,7 +7,7 @@ LOF_FILES=/tmp/$SCRIPT_NAME-$TIMESTAMP.log
 echo "script started excuting at $TIMESTAMP"
 
 VALIDATE() {
-if [$? -ne 0]
+if [ $? -ne 0  ]
 then 
     echo "$1 is failure"
 else 
@@ -15,7 +15,7 @@ else
 fi
 }
 
-if [$USERID -ne 0]
+if [ $USERID -ne 0 ]
 then
     echo "please run the script in root user"
     exit 1
