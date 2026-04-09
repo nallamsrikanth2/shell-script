@@ -4,23 +4,27 @@ USERID=$(id -u)
 TIMESTAMP=$(date +%F-%H-%M-%S)
 SCRIPT_NAME=$(echo $0 | cut -d "." -f1)
 LOG_FILE=/tmp/$SCRIPT_NAME-$TIMESTAMP.log
+R="e[31m"
+G="e[32m"
+N="e[0m"
+Y="e[33m"
 
 VALIDATE (){
 if [ $? -ne 0 ]
 then
-    echo "$2 ....failue"
+    echo -e "$2 $R ....failue $N"
     exit 1
 else
-    echo "$2  .....success"
+    echo -e "$2  $R .....success $N"
 fi
 }
 
 if [ $USERID -ne 0 ]
 then
-    echo "please run the script inside the root user"
+    echo -e "$R please run the script inside the root user $N"
     exit 1
 else    
-    echo "you are root user"
+    echo -e " $G you are root user $N"
 fi
 
 dnf install mysql -y   &>> $LOG_FILE
