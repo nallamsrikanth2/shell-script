@@ -12,7 +12,7 @@ echo "script started excuting at $TIMESTAMP"
 VALIDATE() {
 if [ $? -ne 0  ]
 then 
-    echo -e "$1 is $R failure $N"
+    echo -e "$2 is $R failure $N"
 else 
     echo -e "$2 is $G success $N"
 fi
