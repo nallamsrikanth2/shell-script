@@ -5,7 +5,7 @@ SCRIPT_NAME=$(echo $0 | cut -d "." -f1)
 LOF_FILES=/tmp/$SCRIPT_NAME-$TIMESTAMP.log
 R="\e[31m"
 G="\e[32m"
-N="\e[33m"
+N="\e[0m"
 
 echo "script started excuting at $TIMESTAMP"
 
