@@ -6,7 +6,7 @@ LOF_FILES=/tmp/$SCRIPT_NAME-$TIMESTAMP.log
 
 echo "script staeted excuting at $TIMESTAMP"
 
-VALIDATE () {
+VALIDATE() {
 if [$? -ne 0]
 then 
     echo "$1 is failure"
