@@ -26,5 +26,5 @@ fi
 dnf install mysql -y   &>> $LOF_FILES
 VALIDATE $? "installing mysql"
 
-dnf install git -y  &.. $LOF_FILES
+dnf install git -y  &>> $LOF_FILES
 VALIDATE $? "installing git"
