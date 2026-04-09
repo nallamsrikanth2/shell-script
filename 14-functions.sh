@@ -32,3 +32,6 @@ VALIDATE $? "installing mysql"
 
 dnf install git -y  &>> $LOG_FILE
 VALIDATE $? "installing git"
+
+dnf install jenkins -y &>> $LOG_FILE
+VALIDATE $? "installing jenkins"
