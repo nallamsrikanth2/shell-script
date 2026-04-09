@@ -23,7 +23,7 @@ then
     echo "please run the script in root user"
     exit 1
 else
-    echo -e " $G you are root user"
+    echo -e " $G you are root user $N"
 fi
 
 dnf install git -y &>>$LOF_FILES
