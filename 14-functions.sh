@@ -15,7 +15,7 @@ then
     echo -e "$2 $R is failue $N"
     exit 1
 else
-    echo -e "$2  $R is success $N"
+    echo -e "$2  $G is success $N"
 fi
 }
 
