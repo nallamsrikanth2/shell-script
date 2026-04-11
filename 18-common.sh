@@ -4,7 +4,7 @@ COURSE="my name is srikanth"
 echo "Before calling $COURSE"
 echo "process instance id $$"
 
-./other-script.sh
+./19-other-script.sh
 
 echo "After calling $COURSE"
 echo "process instance is $$"
