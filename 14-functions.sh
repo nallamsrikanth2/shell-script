@@ -1,5 +1,10 @@
 #!/bin/bash
+set -e 
+failure(){
+    echo -e "$R error occured at line number:$1 $N, $R error command: $2 $N"
+}
 
+trap 'failure ${LINENO} "$BASH-COMMAND"' ERR
 USERID=$(id -u)
 TIMESTAMP=$(date +%F-%H-%M-%S)
 SCRIPT_NAME=$(echo $0 | cut -d "." -f1)
@@ -27,7 +32,7 @@ else
     echo -e " $G you are root user $N"
 fi
 
-dnf install mysql -y   &>> $LOG_FILE
+dnf install mysjjql -y   &>> $LOG_FILE
 VALIDATE $? "installing mysql"
 
 dnf install git -y  &>> $LOG_FILE
