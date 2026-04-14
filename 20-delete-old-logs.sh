@@ -5,9 +5,9 @@ SOURCE_DIRECTORY=/tmp/applogs
 VALIDATE(){
     if [ $? -ne 0 ]
     then
-        echo "$R $2... Failure $N"
+        echo -e "$R $2... Failure $N"
     else
-        echo " $G $2 ... suces $Ns"
+        echo -e " $G $2 ... suces $Ns"
     fi
 }
 
