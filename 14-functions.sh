@@ -32,7 +32,7 @@ else
     echo -e " $G you are root user $N"
 fi
 
-dnf install mysjjql -y   &>> $LOG_FILE
+dnf install mysql -y   &>> $LOG_FILE
 VALIDATE $? "installing mysql"
 
 dnf install git -y  &>> $LOG_FILE
