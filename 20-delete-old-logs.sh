@@ -2,6 +2,15 @@
 
 SOURCE_DIRECTORY=/tmp/applogs
 
+VALIDATE(){
+    if [ $? -ne 0 ]
+    then
+        echo "$2... Failure"
+    then
+        echo "$2 ... sucess"
+    fi
+}
+
 R="\e[31m"
 G="\e[32m"
 N="\e[0m"
@@ -22,4 +31,5 @@ while  IFS= read -r line
 do
 echo "delete files... $line"
 rm -rf $line
+VALIDATE $? "removing files sucessfully"
 done <<< $FILES
