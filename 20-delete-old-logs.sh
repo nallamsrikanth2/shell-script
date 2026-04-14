@@ -6,7 +6,7 @@ VALIDATE(){
     if [ $? -ne 0 ]
     then
         echo "$2... Failure"
-    then
+    else
         echo "$2 ... sucess"
     fi
 }
