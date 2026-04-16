@@ -1,18 +1,20 @@
 #!/bin/bash
 
-# Threshold in MB
-THRESHOLD=10
+# Set threshold (percentage)
 
-# Email details
-# TO="your_email@example.com"
-# SUBJECT="RAM Usage Alert"
+THRESHOLD=80
 
-# Get used RAM in MB
-USED_RAM=$(free -m | awk '/Mem:/ {print $3}')
+# Get memory usage percentage (without % sign)
 
-# Check if used RAM exceeds threshold
-if [ "$USED_RAM" -gt "$THRESHOLD" ]; then
-    MESSAGE="Warning: RAM usage is ${USED_RAM}MB which is above threshold ${THRESHOLD}MB on $(hostname)"
-    
-    #echo "$MESSAGE" | mail -s "$SUBJECT" "$TO"
+USAGE=$(free | awk '/Mem:/ {printf("%.0f"), $3/$2 * 100}')
+
+echo "Current memory usage: $USAGE%"
+
+# Compare with threshold
+
+if [ "$USAGE" -ge "$THRESHOLD" ]; then
+echo "⚠️ Memory usage exceeded threshold ($THRESHOLD%)!"
+# You can add actions here (kill process, send alert, etc.)
+else
+echo "✅ Memory usage is under control."
 fi
